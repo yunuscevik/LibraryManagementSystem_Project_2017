@@ -1,0 +1,39 @@
+CREATE TABLE book_table(
+    book_id int PRIMARY KEY,
+    book_name varchar(40),
+    book_author varchar(40),
+    book_author_birthdate number,
+    book_publish_name varchar(40),
+    book_publish_adress varchar(200),
+    book_publish_year number,
+    book_existing number
+);
+
+
+
+create table member_table(
+    member_id int NOT NULL,
+    member_name varchar(40), 
+    member_surname varchar(40),
+    member_username varchar(40)  PRIMARY KEY,
+    member_email varchar(40),
+    member_phone number,
+    member_adress varchar(200),  
+);
+
+create table librarian_table(
+    librarian_id int NOT NULL PRIMARY KEY,
+    librarian_name varchar(40),
+    librarian_surname varchar(40),
+    librarian_username varchar(40),
+    librarian_email varchar(40),
+    librarian_phone number,
+    librarian_adress varchar(200)
+);
+
+create table get_book(
+    getbook_username varchar(40) PRIMARY KEY,
+    getbook_id number,
+);
+
+

@@ -1,0 +1,1 @@
+alter table "LIBDB"."MEMBER_TABLE" add constraint fk_mt foreign key("MEMBER_USERNAME") references "GET_BOOK"("GETBOOK_USERNAME")

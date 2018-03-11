@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        a     
+        {
+                text-decoration: none;
+		        padding: 8px;
+		        display: block;
+		        font-size: 20px;
+		        border-radius: 7px;
+		        background-color: #009dd8;
+		        color: #fff;
+		        background-image: linear-gradient(to bottom,#507a8a,#405a65);
+                width: 224px;
+                height: 25px;
+                margin-left: 5px;
+        }
+        a:hover
+        {   
+                background-color: gray;
+		        color: #fff;
+		        background-image: none;
+		}
+        a:active
+        {
+	        background-color: #663300;
+	        color: #fff;
+	        background-image: none;
+	        border-color: rgba(0,0,0,.2);
+	        border-top-color: rgba(0,0,0,.4);
+	        box-shadow: inset 0 2px 4px rgba(0,0,0,.2);
+        }
+        a i {margin-right: 9px;}
+        
+        .style1 <!– **** ana sayfa başlık resmi ***** ->
+        {
+            height: 200px;
+            width : 1000px;
+        }
+      
+        .style2 <!– **** ana sayfa butonları ******** ->
+        {
+            height: 45px;
+            width : 1005px;
+        }
+        .style3 <!– **** ana sayfa alt kısım ******** ->
+        {
+            height: 30px;
+            width : 1005px;
+        }              
+        .style3  <!– **** ana sayfa alt kısım ******** ->
+        {
+            width: 1005px;
+            margin-left: 0px;
+        }
+        .style4 <!– **** ContentPlaceHolder ********* ->
+        {
+            width: 1000px;
+            height: 500px;
+        }    
+        .style5 <!– **** ana sayfa üst kullanıcı girisi ***** ->
+        {
+            width: 1000px;
+            height: 100px;
+        }
+        .style6
+        {
+            width: 1000px;
+            height: 500px;
+        }
+        .style7
+        {
+            width: 999px;
+            height: 60px;
+        }
+        .style8
+        {
+            width: 252px;
+        }
+        .style9
+        {
+            width: 1000px;
+            height: 100px;
+        }
+    </style>
+   
+</head>
+
+<body style="height: 534px" background="image/masterpage/masterback.jpg">
+    
+
+    <form id="form1" runat="server">
+    <div>
+
+        <!– **** ana sayfa üst kullanıcı girisi ***** ->
+        <center>
+            <table background="image/masterpage/signupbackground.jpg">
+                <tr>
+                    <td class="style7">
+                    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:CheckBox ID="CheckBox1" runat="server" 
+                            BackColor="#999999" BorderWidth="2px" Font-Bold="True" Height="25px" 
+                            Text="Librarian" Width="89px" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label 
+                            ID="Label1" runat="server" BackColor="#999999" BorderColor="Black" 
+                            BorderWidth="2px" Font-Bold="True" Height="25px" Text="  Username:" 
+                            Width="82px"></asp:Label>
+                        &nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox1" runat="server" BorderColor="Black" Height="23px"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label2" runat="server" BackColor="#999999" BorderWidth="2px" 
+                            Font-Bold="True" Height="25px" Text="  Password:" Width="82px"></asp:Label>
+                        &nbsp;
+                        <asp:TextBox ID="TextBox2" runat="server" BorderColor="Black" Height="21px" 
+                            TextMode="Password"></asp:TextBox>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                            Text="Sign In" BackColor="#999999" BorderColor="Black" ForeColor="Black" 
+                            BorderWidth="2px" Font-Bold="True" Height="26px" />
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label3" runat="server" Text="Label" Visible="False" 
+                            BackColor="#999999" BorderStyle="Inset" Font-Size="X-Large"></asp:Label>
+                        <asp:Button ID="Button2" runat="server" BackColor="#999999" BorderColor="Black" 
+                            BorderStyle="Inset" Font-Bold="True" onclick="Button2_Click1" Text="Register" 
+                            Width="93px" />
+                    
+                    </td>
+                </tr>
+            </table> 
+        </center>
+        <!– ***************************************** ->
+
+
+        <!– **** ana sayfa başlık resmi ***** ->
+        <center>
+            <table class="style1"> 
+                    <tr>
+                        <td>
+                                <img src="image/masterpage/masterpage.jpg"/>    
+                        </td>
+                    </tr>
+            </table>
+        </center>
+        <!– ********************************* ->
+
+        <!– **** ana sayfa butonları ******** ->
+        <center>
+            <table class="style2">
+                <tr>
+                    <td align=center>
+                        <a href="index.aspx" style='text-decoration:none;' target="_top">
+                        <i><b>Home</b></i></a>
+                    </td>
+
+                    <td align=center>
+                        <a href="book_operations.aspx" style='text-decoration:none;' target="_top">
+                        <i><b>Book Operations</b></i></a>
+                    </td>
+
+                    <td align=center>
+                        <a href="catalog_scanning.aspx" style='text-decoration:none;' target="_top">
+                         <i><b>Catalog Scanning</b></i></a>
+                    </td>
+
+                    <td align=center class="style8">
+                        <a href="asked_question.aspx" style='text-decoration:none;' target="_top">
+                        <i><b>Asked Question</b></i></a>          
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <!– ********************************* ->
+
+
+        <!– **** ContentPlaceHolder ********* ->
+        <center >
+            <table class="style4" background="image/signup/signup.jpg">
+                <tr>
+                    <td class="style6">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>   
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <!– ********************************* ->
+
+
+        <!– **** ana sayfa alt kısım ******** ->
+        <center>
+            <table class="style3" background="image/masterpage/lowerpage.jpg">
+                <tr>
+                    <td class="style9" >
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <!– ********************************* ->
+
+    
+    
+    
+      
+    </div>
+    </form>
+</body>
+</html>
